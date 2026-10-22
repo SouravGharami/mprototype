@@ -1,0 +1,52 @@
+PASS check-in refused: blank name
+PASS check-in refused: single-word name
+PASS check-in refused: missing nationality
+PASS check-in refused: missing doc type
+PASS check-in refused: short doc no
+PASS check-in refused: doc no with space
+PASS check-in refused: future dob
+PASS check-in refused: impossible date
+PASS check-in refused: garbage date
+PASS check-in refused: departure before arrival
+PASS check-in refused: departure equals arrival
+PASS check-in refused: empty room
+PASS check-in refused: markup in room
+PASS check-in refused: overlong name
+PASS check-in refused: undefined input
+PASS valid check-in still succeeds (Checked in, +1 record)
+PASS check-in of a seeded Expected record via the dialog path still works
+PASS retry refused for every non-rejected status (status unchanged)
+PASS retry of a Rejected record still starts (Pending)
+PASS refused retry is audited as Action blocked
+PASS cancel refused: reason blank
+PASS cancel refused: reason missing
+PASS cancel refused: reason too long
+PASS cancel with a reason works; reason trimmed in history
+PASS amend refused: garbage date
+PASS amend refused: impossible date
+PASS amend refused: blank room
+PASS amend refused: markup room
+PASS amend refused: null
+PASS valid amend works; room trimmed
+PASS checked-out record: check-out, cancel, amend and re-check-in all refused
+PASS a seeded read-only hotel user exists for the permission test
+PASS read-only user: every state-changing store call refused, nothing changed
+PASS denied attempts are audited with outcome Blocked
+PASS audit and activity log do not contain the document number or date of birth
+PASS audit entries carry actor, type, target, detail, outcome and time
+PASS invalid form: errors shown, no dialog, no record created
+PASS invalid form: valid values preserved after error
+PASS invalid form: document-number error is understandable
+PASS future date of birth rejected in the form
+PASS Clear form empties fields and gives feedback
+PASS double-activating Confirm creates exactly one record
+PASS success feedback dialog shown with reference
+PASS cancelling the confirm dialog creates no record and keeps the form values
+PASS Retry button appears only on Rejected rows
+PASS dashboard cards (total, pending) agree with store records
+PASS status-chart segments sum equals records with a government status
+PASS no uncaught page errors / console errors
+PASS no external network requests
+
+49 passed, 0 failed
+EXIT=0

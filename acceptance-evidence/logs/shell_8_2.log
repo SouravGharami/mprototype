@@ -1,0 +1,15 @@
+sidebar links clicked 38
+distinct breadcrumb targets 5
+brand -> #/hotel/dashboard
+search Enter -> #/gov/audit
+search none -> No pages match “zzzqq”
+user menu actions ['switch-portal', 'switch-portal', 'switch-portal', 'act-as', 'act-as', 'act-as', 'act-as(disabled)', 'show-shortcuts', 'reset-demo', 'sign-out']
+sign-out toast: Sign out is not available Out of scope for the prototype — no data is saved or sent.
+#/nope -> #/hotel/dashboard | Dashboard
+#/hotel/nope -> #/hotel/nope | Page not found
+#/gov/nope/x -> #/gov/nope/x | Page not found
+#/ -> #/hotel/dashboard | Dashboard
+# -> #/hotel/dashboard | Dashboard
+
+PROBLEMS 0
+EXIT=0

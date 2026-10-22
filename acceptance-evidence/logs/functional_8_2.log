@@ -1,0 +1,30 @@
+PASS Scan keeps room typed before it
+PASS Late scan result does not wipe another page
+PASS Search kept while submission status changes
+PASS Search box keeps focus during background refresh
+PASS Check-in status reached Acknowledged (simulated)
+PASS Search button disabled while searching
+PASS Quick double search writes one audit entry
+PASS Late search result does not wipe the audit page filter
+PASS Resolving a conflict does not sync other queued records
+PASS Resolved record itself is resubmitted
+PASS Offline resolve logs no false synchronisation
+PASS Old validation errors removed once the form is valid
+PASS Corrected form still reaches the confirmation dialog
+PASS Receptionist sees Review conflict disabled with a reason
+PASS Hotel manager sees Review conflict enabled
+PASS Hotel status chips include Conflict
+PASS Government chips include Queued offline and Conflict
+PASS Unknown record id shows a not-found notice
+PASS Malformed address does not break the page
+PASS Known record id shows no not-found notice
+PASS Dashboard no longer calls Submission Centre planned
+PASS Missing values are not searchable as "undefined"/"null"
+PASS Reset asks for confirmation
+PASS Declining reset keeps demo changes
+PASS Confirming reset restores data
+PASS No console/page errors
+PASS No external requests
+
+27 passed, 0 failed
+EXIT=0

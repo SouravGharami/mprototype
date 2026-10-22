@@ -1,0 +1,26 @@
+PASS Sidebar opens Guest Registration
+PASS PMS prefill fills room/dates and says simulated
+PASS Scan after PMS prefill keeps room
+PASS Scan marks low-confidence fields
+PASS Unchecked document confirmation blocks check-in
+PASS Review dialog masks document number
+PASS Back to edit keeps all values
+PASS Exactly one record created
+PASS Result dialog says simulated, not a real acknowledgement
+PASS View guest record lands on Registrations with that record open
+PASS New guest findable in list with Acknowledged
+PASS Dashboard total = list total
+PASS Government search finds the new guest (masked)
+PASS Start check-in prefills the registration form
+PASS Checking in an Expected record updates it (no duplicate)
+PASS Amend with empty room keeps dialog open and does not claim success
+PASS Amend updates the record and list
+PASS Declining check-out changes nothing
+PASS Check-out applied
+PASS Cancel without reason blocked
+PASS Cancel with reason applied and logged
+PASS Dashboard in-house count matches store
+PASS No console/page errors
+
+failed: 0 []
+EXIT=0

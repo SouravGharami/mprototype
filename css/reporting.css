@@ -1,0 +1,12 @@
+/* Stage 6.1 — Reporting dashboard (synthetic). Uses existing tokens only. */
+.rp-filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--sp-4); align-items: end; }
+.rp-filters .field { min-width: 0; }
+.rp-reset { display: flex; align-items: end; }
+#rp-err { margin-top: var(--sp-3); }
+#rp-table, #rp-empty { min-width: 0; }
+@media (max-width: 600px) { .rp-filters { grid-template-columns: minmax(0, 1fr); } .rp-reset .btn { width: 100%; justify-content: center; } }
+#rp-cards .stat-foot { flex-wrap: wrap; row-gap: 4px; }
+#rp-table td { white-space: nowrap; }
+#rp-table td:nth-child(3) { white-space: normal; min-width: 150px; }
+#rp-table .cell-sub { white-space: normal; }
+#rp-table th, #rp-table th .sort { white-space: normal; text-align: left; } #rp-table th.right .sort { text-align: right; }

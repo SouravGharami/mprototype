@@ -1,0 +1,25 @@
+== A. Required markers on every form-like page (labels carrying * / required attr)
+#/hotel/new-registration | required attrs: ['f-first', 'f-last', 'f-dob', 'f-nat', 'f-docType', 'f-docNo', 'f-room', 'f-arrival', 'f-departure'] | starred labels: ['First name* (required)', 'Last name* (required)', 'Date of birth* (required)', 'Nationality* (required)', 'Document type* (required)', 'Document number* (required)', 'Room* (required)', 'Arrival date* (required)', 'Departure date* (required)', 'I have physically checked the ']
+#/hotel/profile | required attrs: [] | starred labels: []
+#/hotel/staff | required attrs: [] | starred labels: []
+#/admin/establishments | required attrs: [] | starred labels: []
+#/admin/users | required attrs: [] | starred labels: []
+#/admin/reference-data | required attrs: [] | starred labels: []
+#/admin/settings | required attrs: [] | starred labels: []
+== B. Duplicate-guest prevention: same document twice
+{'first': True, 'second': True, 'added': 2, 'refs': ['REG-241113', 'REG-241114']}
+== C. Authentication surface
+password inputs on any route: 0
+roles per portal: {'hotel': ['Neema Kiptoo [Receptionist]', 'Baraka Mushi [Establishment Manager]', 'Grace Lyimo [Receptionist]', 'Idris Komba [Reporting Viewer (read-only)]'], 'gov': ['Joseph Ndege [Authorised Government Officer]', 'Amina Rashid [Government Analyst]', 'Daudi Mkapa [Government Auditor]', 'Lucy Kimaro [Authorised Government Officer]'], 'admin': ['Sofia Okello [System Administrator]', 'Zawadi Mwita [System Administrator]', 'Hamisi Juma [Support Analyst (read-only)]']}
+== D. Lifecycle states present in code/data
+stay: ['Checked in', 'Draft', 'Expected', 'Checked out'] | submission: ['Acknowledged', 'Not reported', 'Rejected', 'Queued offline', 'Conflict']
+== E. Audit: event types, UI controls, mutability
+types seeded: ['Submission event', 'Registration activity', 'Administrative action', 'Configuration proposal', 'Support incident', 'Configuration approval', 'Privileged access']
+#/gov/audit | buttons: ['ACTION', '1', '2', '3'] | delete/edit/clear/purge control present: False
+#/admin/audit-logs | buttons: ['Government audit view', 'ACTION', 'Details', 'Details', 'Details', 'Details', 'Details', 'Details', 'Details', 'Details', 'Details', 'Details', '1', '2'] | delete/edit/clear/purge control present: False
+in-memory audit array frozen? False | entry frozen? False
+console pop() removes an entry: True
+Reset demo data restores/wipes audit (S.reset reseeds): True
+== F. Data handling
+gov search page guard perm: guestsearch:read | audit guard: audit:read
+EXIT=0

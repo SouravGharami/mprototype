@@ -1,0 +1,31 @@
+PASS User menu shows current demo user and the "Acting as" list
+PASS Menu states permissions are demonstration only
+PASS Sign out is honestly reported as not available
+PASS No sign-in form / password field exists anywhere
+PASS Hotel read-only role denied the new-registration page
+PASS Denied page offers no registration form control
+PASS Denied page offers a way back (link to dashboard)
+PASS "Back to dashboard" from the denied page works
+PASS Positive control: Receptionist reaches the registration form
+PASS Receptionist reaches the form via the sidebar link
+PASS Government Auditor denied the guest-search page
+PASS Denied search page has no search button
+PASS Locked government account is shown but disabled in the menu
+PASS Locked account states why (status shown)
+PASS Positive control: Government Officer reaches guest search
+PASS Switching acting user clears earlier unmasks
+PASS Support role: User management renders
+PASS Support role: no enabled Suspend/Reset/Unlock/Reactivate controls on a user page
+PASS Support role: no role-edit controls on Roles page
+PASS Positive control: System Administrator has enabled account controls
+PASS A pending configuration proposal exists to test against
+PASS Proposer cannot approve their own change (reason given)
+PASS Proposal is still pending after the self-approval attempt
+PASS Blocked self-approval is written to the audit trail
+PASS A different administrator can decide it (positive control)
+PASS No acting user gets a blank page on any sidebar route
+PASS No uncaught errors / console errors
+PASS No external network requests
+
+28 passed, 0 failed
+EXIT=0

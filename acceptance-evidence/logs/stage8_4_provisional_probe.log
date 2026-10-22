@@ -1,0 +1,76 @@
+INFO stay statuses present in seed data: ['Checked in', 'Draft', 'Expected', 'Checked out']
+PASS FR-005 [Checked in] offers Amend, Cancel and Check out
+PASS FR-005 [Expected] offers Start check-in and no Check out
+PASS FR-005 [Checked out] terminal record offers no Amend / Cancel / Check out
+PASS FR-005 store.cancel returns true for a legitimate cancel
+PASS FR-005 record is Cancelled after legitimate cancel
+PASS FR-005 store.checkOut on a Cancelled record returns false
+PASS FR-005 ...and leaves it Cancelled with no new history event
+PASS FR-005 store.cancel on an already-Cancelled record returns false
+PASS FR-005 store.amend on a Cancelled record returns false and keeps the room
+PASS FR-005 store.cancel on a Checked-out record returns false and keeps it Checked out
+PASS FR-005 store.checkOut on an Expected record returns false and keeps it Expected
+PASS FR-005 blocked lifecycle attempts are written to the audit list
+PASS FR-002 store.amend rejects departure on arrival date
+PASS FR-002 store.amend rejects an empty room
+PASS FR-002 store.amend accepts a valid change (regression)
+PASS FR-005 store.checkOut on a Checked-in record still works (regression)
+PASS FR-005 store.checkIn on an existing [Checked out] record is refused (returns null) and keeps its status
+PASS FR-005 store.checkIn on an existing [Checked in] record is refused (returns null) and keeps its status
+PASS FR-005 store.checkIn on an Expected record still works (regression)
+PASS FR-005 store.checkIn for a brand-new registration still works (regression)
+PASS FR-002 empty form: a message mentioning "first name" is shown
+PASS FR-002 empty form: a message mentioning "last name" is shown
+PASS FR-002 empty form: a message mentioning "date of birth" is shown
+PASS FR-002 empty form: a message mentioning "nationality" is shown
+PASS FR-002 empty form: a message mentioning "document type" is shown
+PASS FR-002 empty form: a message mentioning "document number" is shown
+PASS FR-002 empty form: a message mentioning "room" is shown
+PASS FR-002 empty form: a message mentioning "arrival date" is shown
+PASS FR-002 empty form: a message mentioning "departure date" is shown
+PASS FR-002 empty form: a message mentioning "document check" is shown
+PASS FR-002 empty form: no confirmation dialog opens and no record is created
+PASS FR-002 empty form: first invalid field is flagged aria-invalid
+PASS FR-002 future date of birth is rejected with a message
+PASS FR-002 document number with a space / wrong length is rejected
+PASS FR-002 departure on the arrival date is rejected
+PASS FR-002 invalid form created no record and opened no dialog
+PASS NFR-001 read-only user: Expected-record dialog offers no Start check-in
+PASS NFR-001 read-only user: Checked-in dialog offers no Amend / Cancel / Check out
+PASS FR-011 read-only user: registration route shows Not permitted and renders no form
+PASS FR-011/FR-016 read-only user: direct store cancel/amend/check-out/check-in are all refused
+PASS FR-011 read-only user: refused calls changed no record and created none
+PASS FR-010 read-only user: each refused call is audited as "Permission denied" (4 expected, got 4)
+PASS FR-010 check-in writes audit entries for REG-241015 (2 new)
+PASS FR-010 check-in audit text records "checked in"
+PASS FR-010 amend writes audit entries for REG-241015 (2 new)
+PASS FR-010 amend audit text records "Amended"
+PASS FR-010 cancel (with reason) writes audit entries for REG-241015 (2 new)
+PASS FR-010 cancel (with reason) audit text records "Guest no-show probe"
+PASS FR-010 check-out writes audit entries for REG-241113 (2 new)
+PASS FR-010 check-out audit text records "Checked out"
+PASS FR-010 registration audit entries created by lifecycle actions name the acting demo user or "System (simulated)" (11 entries)
+PASS NFR-001 hotel list does not display any full document number
+PASS NFR-001 hotel record dialog does not display the full document number
+PASS FR-013 seed: nav badge (2) == store queue (2)
+PASS FR-013 seed: queue page rows (2) == store queue (2)
+PASS FR-013 seed: dashboard Pending card equals Pending+Submitted+queue (2)
+PASS FR-013 offline + 1 new check-in: nav badge (3) == store queue (3)
+PASS FR-013 offline + 1 new check-in: queue page rows (3) == store queue (3)
+PASS FR-013 offline + 1 new check-in: dashboard Pending card equals Pending+Submitted+queue (3)
+PASS FR-013 after sync: nav badge (1) == store queue (1)
+PASS FR-013 after sync: queue page rows (1) == store queue (1)
+PASS FR-013 after sync: dashboard Pending card equals Pending+Submitted+queue (3)
+PASS FR-012 no password field exists on any route (no false sign-in affordance)
+PASS FR-012 [hotel] menu says users are "Acting as (demo user)" and Sign out is not available
+PASS FR-012 [gov] menu says users are "Acting as (demo user)" and Sign out is not available
+PASS FR-012 [admin] menu says users are "Acting as (demo user)" and Sign out is not available
+PASS FR-015 every dashboard page carries a demo/synthetic/sample label
+INFO hotel dashboard labels: ['Demo', 'Simulated', 'demo', 'simulated', 'synthetic']
+INFO gov dashboard labels: ['Demo', 'SAMPLE', 'Sample', 'demo', 'planning', 'sample']
+INFO admin dashboard labels: ['Simulated', 'Synthetic', 'demo', 'planning', 'simulated', 'synthetic']
+INFO establishment names found in demo data: []
+PASS NFR-001/007 no external network requests during probe
+PASS no console/page errors during probe
+PROBLEMS 0
+EXIT=0

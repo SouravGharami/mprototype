@@ -1,0 +1,56 @@
+PASS selftest: real-looking URL flagged / reserved URL allowed
+PASS selftest: SVG xmlns allowed but a bare w3.org link is still flagged
+PASS selftest: real-looking email flagged / .example allowed
+PASS selftest: real-looking phone flagged / +255 000 allowed
+PASS selftest: all 8 secret detectors fire on planted samples
+PASS selftest: documented placeholder token is allowed
+PASS selftest: network-API detector fires
+PASS static: scanned 28 shipped files (js/css/html)
+PASS static: no URL outside reserved/example hosts
+PASS static: no email outside reserved/example domains
+PASS static: no phone number outside the fictional +255 000 convention
+PASS static: no secret-like pattern (documented SYNTHETIC-SANDBOX-TOKEN placeholder excepted)
+PASS static: no network API in executable code (comments and prose strings excluded)
+PASS static: index.html loads no external script/style/image/frame
+PASS static: CSP meta present and forbids unsafe-eval
+PASS rendered: route set built (nav + detail pages), 202 routes
+PASS desktop: top-of-page demo label (ribbon or strip) visible above the fold with "synthetic/prototype" on all 202 routes
+PASS desktop: footer "Synthetic data only / Not a production system" visible on all routes
+PASS desktop: every route has a page title (no blank render)
+PASS desktop: rendered text has no real-looking URL
+PASS desktop: rendered text has no real-looking email
+PASS desktop: rendered text has no phone outside +255 000 convention
+PASS phone: top-of-page demo label (ribbon or strip) visible above the fold with "synthetic/prototype" on all 202 routes
+PASS phone: footer "Synthetic data only / Not a production system" visible on all routes
+PASS phone: every route has a page title (no blank render)
+PASS phone: rendered text has no real-looking URL
+PASS phone: rendered text has no real-looking email
+PASS phone: rendered text has no phone outside +255 000 convention
+PASS title: not clipped on all 202 routes at 320 px
+PASS title: sits fully inside the top bar at 320 px
+PASS title: no horizontal page overflow at 320 px on any route
+PASS title: the longest title (INT-1008, 4 lines at 320 px) is fully visible, bar grows to fit
+PASS title: each of the 12 routes that clipped at 320 px is now unclipped
+PASS title: not clipped on all 202 routes at 360 px
+PASS title: sits fully inside the top bar at 360 px
+PASS title: no horizontal page overflow at 360 px on any route
+PASS title: the 3 routes that clipped at 360 px are now unclipped
+PASS title: not clipped on all 202 routes at 390 px
+PASS title: sits fully inside the top bar at 390 px
+PASS title: no horizontal page overflow at 390 px on any route
+PASS title: top bar keeps its normal 64 px height at 390 px for titles that already fit (no layout change)
+PASS title: not clipped on all 202 routes at 430 px
+PASS title: sits fully inside the top bar at 430 px
+PASS title: no horizontal page overflow at 430 px on any route
+PASS title: top bar keeps its normal 64 px height at 430 px for titles that already fit (no layout change)
+PASS title: not clipped on all 202 routes at 768 px
+PASS title: sits fully inside the top bar at 768 px
+PASS title: top bar keeps its normal 64 px height at 768 px for titles that already fit (no layout change)
+PASS title: not clipped on all 202 routes at 1366 px
+PASS title: sits fully inside the top bar at 1366 px
+PASS title: top bar keeps its normal 64 px height at 1366 px for titles that already fit (no layout change)
+PASS rendered: no console/page errors during the whole sweep
+PASS rendered: no non-file/data/blob network request during the sweep
+
+53 passed, 0 failed
+EXIT=0

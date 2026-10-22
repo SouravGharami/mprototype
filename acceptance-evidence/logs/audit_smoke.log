@@ -1,0 +1,27 @@
+PASS All 38 nav routes render with no console/page errors
+PASS Unknown route shows not-found page
+PASS Government Auditor denied Reporting
+PASS Government Officer allowed Reporting
+PASS Empty registration form shows validation errors
+PASS Check-in reaches Acknowledged (simulated)
+PASS Integration test connection logs an event
+PASS Sandbox send does not mutate state
+PASS Webhook rejects non-https URL
+PASS Webhook simulate adds exactly one delivery record
+PASS Export disabled by default
+PASS CSV has 17 columns on every row and SYNTHETIC notice
+PASS Notification read/unread toggle flips
+PASS Notification search with no match yields zero rows
+PASS M1 Registrations list shows Cancelled right after the dialog closes
+PASS M2 Hotel bell counts match live data
+PASS M2 Hotel bell updates after sync (matches live queue)
+PASS M3 No duplicate submission events after cancel mid-flight
+PASS M4 OpenAPI & Sandbox nav item opens the sandbox
+PASS M1 Amend shows the new room in the list immediately
+PASS M2 Hotel bell becomes unread again when the rejected count rises
+PASS M2 Reset restores Hotel bell to match reset data
+PASS M4 Sandbox redirect still enforces integrations:read (denied page, no controls)
+PASS No external network requests during run
+
+24 passed, 0 failed
+EXIT=0

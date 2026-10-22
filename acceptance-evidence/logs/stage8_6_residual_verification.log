@@ -1,0 +1,26 @@
+PASS L3: "webhook" finds the Developer Portal (description match)
+PASS L3: label matches still returned and listed first ("audit")
+PASS L3: existing label search unchanged ("sandbox" finds OpenAPI & Sandbox)
+PASS L3: nonsense query still shows the empty message
+PASS L3: results capped at 8
+PASS L3: label hits precede description-only hits ("registration")
+PASS L5: page button is labelled for what it does ("Mark all alerts as read")
+PASS L5: button explains the bell scope in its title
+PASS L5: after page mark-all, no alert on the page is unread
+PASS L5: remaining bell count equals the unread items shown in the bell panel (consistent)
+PASS L5: every remaining unread bell item is a static non-alert item (none is a simulated reporting alert)
+PASS L5: the bell's own "Mark all as read" clears the badge to 0
+PASS L5: Reporting Alerts page still shows 0 unread after bell mark-all (no divergence)
+PASS L6: no horizontal page overflow on any of 199 routes at 390 px
+PASS L6: no horizontal page overflow on any of 199 routes at 320 px
+PASS L7: only one localStorage key is ever written (msafiri.collapsed)
+PASS L7: its value is just a 0/1 flag (no demo or personal data)
+PASS L7: nothing written to sessionStorage
+PASS L7: README states the localStorage exception (no longer claims "tab memory only" without it)
+PASS L7: README persistence table no longer says "None (browser tab memory only)" unqualified
+PASS L7: Reset demo data restores the preference to expanded (0)
+PASS no console/page errors
+PASS no non-file network request
+
+23 passed, 0 failed
+EXIT=0

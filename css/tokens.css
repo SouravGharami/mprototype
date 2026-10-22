@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Msafiri — design tokens
+   Single source of truth for colour, type, spacing, radius, elevation, layout.
+   Programme palette: navy + orange (see README → Assumptions).
+   ========================================================================== */
+:root {
+  /* Navy scale (brand primary) */
+  --navy-950: #061330;
+  --navy-900: #0a1f44;
+  --navy-800: #0f2b5c;
+  --navy-700: #16397a;
+  --navy-600: #1e4a99;
+  --navy-500: #2d62bf;
+  --navy-300: #8fa9d8;
+  --navy-200: #c3d1ec;
+  --navy-100: #e3eaf6;
+  --navy-50:  #f0f4fa;
+
+  /* Orange scale (brand accent) */
+  --orange-700: #b04a05;
+  --orange-600: #d9620e;
+  --orange-500: #f47b20;
+  --orange-400: #f79a4f;
+  --orange-200: #fdd2ae;
+  --orange-100: #ffe9d6;
+  --orange-50:  #fff5ec;
+
+  /* Neutrals (slightly navy-tinted) */
+  --bg:           #f3f5f9;
+  --surface:      #ffffff;
+  --surface-2:    #f8fafc;
+  --border:       #e1e6ef;
+  --border-strong:#c9d1e0;
+  --text:         #0d1a33;
+  --text-2:       #46526e;
+  --text-3:   #5f6b87;   /* Stage 8.1: >= 4.8:1 on white, page background and tinted surfaces */
+  --text-inverse: #ffffff;
+
+  /* Semantic status */
+  --success-700: #0b6546;  --success-500: #14935f;  --success-100: #dcf3ea;
+  --warning-700: #8a5a06;  --warning-500: #d49210;  --warning-100: #fdf0d2;
+  --danger-700:  #a52a1d;  --danger-500:  #d64533;  --danger-100:  #fbe3df;
+  --info-700:    #14548f;  --info-500:    #2478c4;  --info-100:    #dcebf9;
+
+  /* Chart categorical palette */
+  --chart-1: #16397a;
+  --chart-2: #f47b20;
+  --chart-3: #1a8f8a;
+  --chart-4: #8a97b1;
+  --chart-5: #6b4fb3;
+  --chart-grid: #e6eaf2;
+
+  /* Typography */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+  --fs-xs: 0.75rem;   /* 12 */
+  --fs-sm: 0.8125rem; /* 13 */
+  --fs-base: 0.9375rem; /* 15 */
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2.125rem;
+  --lh-tight: 1.25;
+  --lh-base: 1.5;
+
+  /* Spacing (4px grid) */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
+
+  /* Radius */
+  --r-sm: 6px; --r-md: 10px; --r-lg: 14px; --r-pill: 999px;
+
+  /* Elevation */
+  --shadow-xs: 0 1px 2px rgba(10, 31, 68, 0.06);
+  --shadow-sm: 0 1px 3px rgba(10, 31, 68, 0.08), 0 1px 2px rgba(10, 31, 68, 0.04);
+  --shadow-md: 0 6px 18px rgba(10, 31, 68, 0.10);
+  --shadow-lg: 0 18px 48px rgba(10, 31, 68, 0.22);
+
+  /* Focus */
+  --focus-ring: 0 0 0 3px rgba(244, 123, 32, 0.45);
+  --focus-ring-on-dark: 0 0 0 3px rgba(247, 154, 79, 0.7);
+
+  /* Layout */
+  --sidebar-w: 272px;
+  --sidebar-w-collapsed: 76px;
+  --topbar-h: 64px;
+  --content-max: 1480px;
+
+  /* Layering */
+  --z-topbar: 40; --z-sidebar: 50; --z-scrim: 45; --z-dropdown: 60; --z-modal: 80; --z-toast: 90;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 160ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

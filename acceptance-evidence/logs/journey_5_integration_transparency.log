@@ -1,0 +1,51 @@
+PASS Integration dashboard states no real PMS, vendor API or government system is called
+PASS Every integration row is tagged "Simulated"
+PASS Dashboard stat cards labelled as simulated state
+PASS Detail page: "Simulated actions" notice present
+PASS Detail page: health is labelled a local scripted result, not live monitoring
+PASS Detail page: credentials are masked, never shown
+PASS While running, UI says "(simulated)"
+PASS Test-connection result is labelled "(simulated)"
+PASS Test-connection result makes no real-system claim
+PASS Test-connection recorded as a simulated event
+PASS Health-check result is labelled "(simulated)"
+PASS A disabled integration exists to test against
+PASS Test on a disabled integration is a Warning, never a success
+PASS Support (read-only) role cannot run a test connection
+PASS Event history is labelled synthetic/simulated
+PASS Event dialog says "Synthetic event … not a real operational log"
+PASS Webhook list: "Simulation only — nothing is sent"
+PASS Webhook list: every destination shows "Never contacted"
+PASS Webhook results carry "(simulated)"
+PASS Webhook detail: "Signing secret — None. No secret is created"
+PASS Webhook detail: event contract labelled illustrative/pending specification
+PASS Webhook payload preview carries "simulated": true and synthetic guest
+PASS Simulated delivery success reads "Simulated — not a real delivery"
+PASS Delivery result makes no unqualified real-delivery claim
+PASS Persistent-failure scenario shows a simulated failure
+PASS Webhook toggling/deleting is a local configuration change only (notice stays)
+PASS Sandbox page: "Simulated sandbox — nothing is sent"
+PASS Sandbox: 12 responses across all endpoints are labelled simulated and make no real claim
+PASS Sandbox refuses/never shows credential-looking headers (no Authorization echo)
+PASS Review dialog does not claim anything has been sent yet
+PASS Result dialog states the submission is simulated
+PASS Result dialog makes no unqualified government-transmission claim
+PASS Submission Centre: "Acknowledged … NOT a real government acknowledgement"
+PASS Submission eventually shows Acknowledged AND the disclaimer is still on the page
+PASS Offline queue says records are not delivered until synchronised
+PASS Hotel PMS page is an openly-labelled planned placeholder (no connection claim)
+PASS Government monitoring: "no real government API is involved"
+PASS Export disabled for the default government role (no silent export)
+PASS Export produced a local file named as synthetic/sample
+PASS Export file content is marked synthetic/simulated
+PASS Export toast says "Synthetic CSV created" and claims no transmission
+PASS Export audit entry says "not submitted anywhere"
+PASS Export made no network call
+PASS Sweep of 53 pages: no unqualified real-transmission/connectivity claim
+PASS Sweep: every page showing Acknowledged/Submitted/Connected/Delivered also carries a simulation/demo disclosure
+PASS Instrumented network APIs (fetch/XHR/beacon/WebSocket/SSE) were never called
+PASS No non-file/data/blob request seen by the browser
+PASS No uncaught page errors / console errors
+
+48 passed, 0 failed
+EXIT=0

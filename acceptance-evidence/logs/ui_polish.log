@@ -1,0 +1,23 @@
+PASS No horizontal page overflow on 38 routes at 1366px
+PASS No horizontal page overflow on 38 routes at 768px
+PASS No horizontal page overflow on 38 routes at 390px
+PASS Profile status badges stay inside their card
+PASS Top bar user name is on a single line
+PASS Tablet top-bar title is not truncated (Reporting Dashboard)
+PASS Mobile drawer closes after tapping the current page link
+PASS No enabled control without an action on any route
+PASS Top-bar title not clipped on 38 routes at 1366px
+PASS Top-bar title not clipped on 38 routes at 768px
+PASS Top-bar title not clipped on 38 routes at 390px
+PASS Top-bar title not clipped on 38 routes at 360px
+PASS No horizontal page overflow on 38 routes at 320px
+PASS Tablet search placeholder is not truncated
+PASS Scrollable table is a focusable, labelled region on a phone
+PASS Scrollable table marks the edge with hidden columns
+PASS Table that fits has no extra tab stop on a wide screen
+PASS Status-text deltas get no trend arrow; signed deltas do
+PASS Text contrast >= 4.5:1 (3:1 large) on every route, excluding disabled controls and the palette showcase
+PASS No console/page errors
+
+20 passed, 0 failed
+EXIT=0

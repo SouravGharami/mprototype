@@ -1,0 +1,55 @@
+PASS A1 nav has 38 items (hotel 12, gov 7, admin 19)
+PASS A2 exactly the six known placeholder routes have no registered page
+PASS A3 each placeholder shows the "Planned module" template and nothing else
+PASS A4 every live page has real content (>300 chars)
+PASS A5 every live page carries a synthetic/demo/sample/simulated wording (keyword presence only)
+PASS A6 no console/page errors across all 38 routes
+PASS A7 no non-file network request during the sweep (NFR-007, FR-014)
+PASS A8 no password field on any route (FR-012)
+PASS A9 hotel user menu: "Acting as (demo user)" and sign-out "Not available in prototype"
+PASS A9 gov user menu: "Acting as (demo user)" and sign-out "Not available in prototype"
+PASS A9 admin user menu: "Acting as (demo user)" and sign-out "Not available in prototype"
+PASS A10 no horizontal page scroll at 375px on any of 38 routes (NFR-004)
+PASS A11 mobile "Open navigation" control exists at 375px
+PASS B1 directory holds 20 synthetic establishments
+PASS B2 LIMIT: hotel records carry no establishment field (no per-establishment data model)
+PASS B3 LIMIT: only PIL-001 users can be chosen as the hotel acting user
+PASS B4 DEFECT EVIDENCE: acting as a user of another establishment (USR-005, Palm Crest Lodge, set via console) shows the SAME 13 records — no isolation
+PASS B5 persona label follows the user while the data does not (user menu says Palm Crest Lodge)
+PASS C1 form exposes the 11 captured fields
+PASS C2 every form control has an accessible name (NFR-004)
+PASS C3 shared validator rejects an empty record with field errors (FR-002)
+PASS C4 LIMIT: DOB 1800-01-01 is accepted (no plausibility limit; not invented)
+PASS D1 registrations list total equals the store (13)
+PASS D2 search "Amara" finds REG-241012
+PASS D2 search "REG-241013" finds Lukas
+PASS D2 search "Tanzania" finds Zainab
+PASS D3 LIMIT: search does not match document number (keys: name, reference, room, nationality); masked in list
+PASS D4 full document numbers are not displayed in the list
+PASS D5 status filter "Rejected" count equals store
+PASS D6 dashboard total equals store (FR-007/018)
+PASS D7 submissions list equals records with a reported status (FR-018)
+PASS D8 offline-queue nav badge equals store queue (FR-013)
+PASS D9 badge follows the store after a conflict is resolved
+PASS E1 read-only hotel user: registration route shows no form and a denial (FR-011)
+PASS E2 store-level call by that user is refused and changes nothing
+PASS E3 refusal is audited as Permission denied
+PASS E4 LIMIT: access control is front-end only — the acting user can be switched from the console and records are mutable in memory (no server)
+PASS E5 gov analyst opening Audit route sees a denial or the page, never a blank (FR-017)
+PASS F1 valid check-in creates a record and writes audit entries naming the acting demo user (FR-010)
+PASS F2 invalid check-in returns no record and audits "Action blocked" (FR-016)
+PASS F3 government Audit page lists the Hotel events (FR-010)
+PASS F4 reports page states sample/simulated and that no real submission occurs (FR-009)
+PASS F5 LIMIT: no seeded role holds reports:create (export unusable by default)
+PASS F6 gov dashboard labelled demo/synthetic; pilot "17 of 20" marked planning context (FR-015)
+PASS G1 CSP meta present with default-src none and no inline <script> bodies
+PASS G2 all seeded document numbers follow the synthetic pattern P[AB]nnnnnnn
+PASS G3 all seeded user emails use reserved .example domains and +255 000 phones
+PASS H1 traceability matrix has a row for all 26 provisional IDs
+PASS H2 every matrix row uses an allowed status (found 26)
+PASS H3 matrix labels itself provisional and unapproved
+PASS H4 STAGE_8_9_IMPLEMENTATION_GAP_REPORT.md exists
+PASS H4 STAGE_8_9_REPORT.md exists
+
+52 passed, 0 failed
+EXIT=0

@@ -1,0 +1,35 @@
+PASS J1 sidebar opens the registration form
+PASS J1 empty form is refused with visible errors and no dialog
+PASS J1 review dialog masks the document number
+PASS J1 exactly one record created
+PASS J1 new guest is findable in Registrations
+PASS J1 submission reaches Acknowledged (simulated)
+PASS J1 dashboard total equals the record count after the journey
+PASS J1 Submission Centre offers Retry for a rejected record
+PASS J2 search page opens with a purpose selector
+PASS J2 search without a purpose is refused
+PASS J2 search returns results
+PASS J2 results do not expose the searched full name unmasked
+PASS J2 the search is written to the audit trail
+PASS J2 record opens with sensitive fields masked
+PASS J2 unmasking with a too-short justification is refused
+PASS J2 valid justification unmasks and the action is audited
+PASS J2 audit page lists the unmasking
+PASS J3 Users list renders
+PASS J3 empty user form shows validation errors
+PASS J3 an obviously duplicate email is not silently created
+PASS J3 valid user is created exactly once
+PASS J3 new user is findable in the list
+PASS J3 #/admin/roles renders non-empty without error
+PASS J3 #/admin/establishments renders non-empty without error
+PASS J3 #/admin/reference-data renders non-empty without error
+PASS J3 #/admin/settings renders non-empty without error
+PASS J3 #/admin/audit-logs renders non-empty without error
+PASS J3 #/admin/pms-health renders non-empty without error
+PASS J3 #/admin/support-incidents renders non-empty without error
+PASS J3 user creation is in the audit trail
+PASS No uncaught errors / console errors
+PASS No external network requests
+
+32 passed, 0 failed
+EXIT=0
